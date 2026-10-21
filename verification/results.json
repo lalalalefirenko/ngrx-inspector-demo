@@ -1,0 +1,20 @@
+{
+  "browser": "Chrome/150.0.7871.181",
+  "checks": [
+    "Angular loads six products and the published bridge emits actual NgRx actions",
+    "Cart scene has reorder, nested gift wrap, integer totals, discount and quantity changes",
+    "Real extension transport and action list receive the application actions",
+    "Quantity changes appear in the extension Diff tab",
+    "Stable cart-line IDs let the actual extension show a move instead of replacements",
+    "Rich diff shows additions, removals, moves, quantity, nested options and totals in one action",
+    "Repeating the scene produces exactly the same business state",
+    "Successful order stores ORD-1048 and clears the bag",
+    "Failed payment keeps all items and creates no order",
+    "Retry after simulated failure completes an actual order",
+    "Manual controls dispatch the same actions",
+    "Invalid promo emits a failure action without changing totals",
+    "Valid promo is trimmed and normalized",
+    "Removing the last product clears its coupon",
+    "No browser runtime exceptions"
+  ]
+}

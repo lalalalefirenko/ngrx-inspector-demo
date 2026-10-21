@@ -1,0 +1,385 @@
+<svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="i-bag" viewBox="0 0 24 24">
+    <path d="M5 7h14l1 14H4L5 7Z M8 7V6a4 4 0 0 1 8 0v1" />
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6" /></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24">
+    <path d="M20 4a5.5 5.5 0 0 0-8 1 5.5 5.5 0 0 0-8-1c-4 4 0 8 8 15 8-7 12-11 8-15Z" />
+  </symbol>
+  <symbol id="i-search" viewBox="0 0 24 24">
+    <circle cx="10" cy="10" r="6.5" />
+    <path d="m15 15 5 5" />
+  </symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 10a8 8 0 1 1 1 8M4 4v6h6" /></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6" /></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 20V4m-6 6 6-6 6 6" /></symbol>
+</svg>
+<div class="announcement">
+  Considered essentials. Everyday possibilities.<span>Free standard shipping over $100 ↗</span>
+</div>
+<header class="header">
+  <a class="brand" href="/" aria-label="Form Supply home"
+    ><span class="brand-mark" aria-hidden="true">f.</span>form<span class="brand-supply"
+      >supply</span
+    ></a
+  >
+  <nav aria-label="Main navigation">
+    <span class="nav-active">The collection</span><span>Made for your everyday</span>
+  </nav>
+  <div class="header-right">
+    <span class="customer-name">{{ customer().profile?.name ?? 'Welcome' }}</span
+    ><span class="avatar">AM</span
+    ><a class="bag-link" href="#shopping-bag" aria-label="View your bag"
+      ><svg class="icon"><use href="#i-bag" /></svg><span class="bag-count">{{ count() }}</span></a
+    >
+  </div>
+</header>
+<section class="demo-bar" aria-label="Screenshot demo controls" [attr.aria-busy]="demo.running()">
+  <div class="demo-label">
+    <span class="live-dot"></span>
+    <div><strong>NgRx playground</strong><span>Pick a scene. See the state change.</span></div>
+  </div>
+  <div class="scene-buttons">
+    <button
+      data-scene="cart"
+      [class.selected]="demo.activeScene() === 'cart'"
+      [disabled]="busy()"
+      (click)="demo.run('cart')"
+    >
+      <span class="scene-number">01</span> Cart &amp; discount
+    </button>
+    <button
+      data-scene="order"
+      [class.selected]="demo.activeScene() === 'order'"
+      [disabled]="busy()"
+      (click)="demo.run('order')"
+    >
+      <span class="scene-number">02</span> Successful order
+    </button>
+    <button
+      data-scene="error"
+      [class.selected]="demo.activeScene() === 'error'"
+      [disabled]="busy()"
+      (click)="demo.run('error')"
+    >
+      <span class="scene-number">03</span> Payment failure
+    </button>
+    <button
+      data-scene="diff"
+      [class.selected]="demo.activeScene() === 'diff'"
+      [disabled]="busy()"
+      (click)="demo.run('diff')"
+    >
+      <span class="scene-number">04</span> Rich cart diff
+    </button>
+  </div>
+  <button class="reset-button" data-reset [disabled]="busy()" (click)="demo.reset()">
+    <svg class="icon"><use href="#i-reset" /></svg>Reset demo
+  </button>
+</section>
+<fieldset class="storefront" [disabled]="busy()" [attr.aria-busy]="busy()">
+  <legend class="sr-only">Shop products and manage your bag</legend>
+  <main class="shop-layout">
+    <section class="collection" aria-labelledby="collection-title">
+      <div class="collection-heading">
+        <div>
+          <p class="eyebrow"><span></span> THE EVERYDAY EDIT / VOL. 01</p>
+          <h1 id="collection-title">Good things.<br /><span>Better everyday.</span></h1>
+          <p class="intro">
+            Thoughtfully chosen essentials for the way you work,<br />
+            unwind, and everything in between.
+          </p>
+        </div>
+        <div class="edition-mark" aria-hidden="true">
+          <span>LESS, BUT<br />BETTER.</span
+          ><svg viewBox="0 0 60 60"><path d="M30 4v52M4 30h52M12 12l36 36M12 48l36-36" /></svg>
+        </div>
+      </div>
+      <div class="catalog-controls">
+        <div class="categories" aria-label="Product categories">
+          @for (cat of categories; track cat) {
+            <button
+              [attr.aria-pressed]="catalog().filters.category === cat"
+              [class.active]="catalog().filters.category === cat"
+              (click)="category(cat)"
+            >
+              {{ cat }}
+              @if (cat === 'All') {
+                <span>{{ catalog().products.length }}</span>
+              }
+            </button>
+          }
+        </div>
+        <label class="sort-label"
+          ><span class="sr-only">Sort products</span
+          ><select aria-label="Sort products" [value]="catalog().sort" (change)="sort($event)">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+          </select></label
+        >
+      </div>
+      <label class="search"
+        ><svg class="icon"><use href="#i-search" /></svg
+        ><input
+          type="search"
+          placeholder="Find your next everyday essential"
+          aria-label="Search products"
+          [value]="catalog().filters.query"
+          (input)="search($event)"
+        /><span>{{ products().length }} essentials</span></label
+      >
+      <div class="product-grid">
+        @for (product of products(); track product.id) {
+          <article class="product" [attr.data-product]="product.id">
+            <div [class]="'product-art art-' + product.image">
+              @if (product.badge) {
+                <span class="product-badge" [class.new]="product.badge === 'New arrival'">{{
+                  product.badge
+                }}</span>
+              }
+              <button
+                class="favorite"
+                [class.favorited]="catalog().favorites.includes(product.id)"
+                [attr.aria-label]="'Favorite ' + product.name"
+                [attr.aria-pressed]="catalog().favorites.includes(product.id)"
+                (click)="favorite(product.id)"
+              >
+                <svg class="icon"><use href="#i-heart" /></svg>
+              </button>
+              <img
+                [src]="'products/' + product.image + '.svg'"
+                [alt]="product.color + ' ' + product.name"
+                width="280"
+                height="210"
+              />
+              <span class="product-color"
+                ><span [class]="'swatch swatch-' + product.image"></span>{{ product.color }}</span
+              >
+              <button
+                class="add-button"
+                [attr.aria-label]="'Add ' + product.name + ' to bag'"
+                (click)="add(product)"
+              >
+                +
+              </button>
+            </div>
+            <div class="product-info">
+              <h2>{{ product.name }}</h2>
+              <strong>{{ product.price / 100 | currency: 'USD' : 'symbol' : '1.0-0' }}</strong>
+              <p>{{ product.description }}</p>
+            </div>
+          </article>
+        } @empty {
+          <div class="catalog-empty">
+            <h2>
+              {{
+                catalog().status === 'loading'
+                  ? 'Gathering the good things…'
+                  : 'Nothing here just yet.'
+              }}
+            </h2>
+            <p>{{ catalog().error ?? 'Try a different search or category.' }}</p>
+          </div>
+        }
+      </div>
+      <p class="collection-footer">
+        <span>Designed to fit into your life.</span><span>Quality over quantity, always. ↗</span>
+      </p>
+    </section>
+    <aside class="cart" id="shopping-bag" aria-labelledby="bag-title">
+      <div class="cart-heading">
+        <div>
+          <p class="eyebrow">A FEW GOOD CHOICES</p>
+          <h2 id="bag-title">
+            Your bag<span>{{ count() }}</span>
+          </h2>
+        </div>
+        <svg class="icon"><use href="#i-bag" /></svg>
+      </div>
+      @if (lastOrder(); as order) {
+        <div class="order-success" role="status">
+          <span class="success-check"
+            ><svg class="icon"><use href="#i-check" /></svg
+          ></span>
+          <div>
+            <strong>Good things are on their way.</strong>
+            <p>{{ order.id }} · {{ order.totals.grandTotal / 100 | currency }} · Confirmed</p>
+          </div>
+        </div>
+      }
+      @if (lines().length) {
+        <div class="shipping-note">
+          <svg class="icon"><use href="#i-check" /></svg
+          >{{
+            cart().summary.subtotal >= 10000
+              ? 'You unlocked free standard shipping.'
+              : 'Free standard shipping on orders over $100.'
+          }}
+        </div>
+        <div class="cart-items">
+          @for (line of lines(); track line.productId; let i = $index) {
+            <div class="cart-item" [attr.data-cart-item]="line.productId">
+              <div class="cart-item-top">
+                <img
+                  [src]="'products/' + line.image + '.svg'"
+                  alt=""
+                  width="72"
+                  height="72"
+                  [class]="'cart-thumb art-' + line.image"
+                />
+                <div class="cart-item-info">
+                  <div class="item-title">
+                    <h3>{{ line.name }}</h3>
+                    <button
+                      class="remove"
+                      [attr.aria-label]="'Remove ' + line.name"
+                      (click)="remove(line.productId)"
+                    >
+                      ×
+                    </button>
+                  </div>
+                  <p>{{ line.options.color }}</p>
+                  <div class="item-controls">
+                    <div class="quantity">
+                      <button
+                        [disabled]="line.quantity <= 1"
+                        [attr.aria-label]="'Decrease ' + line.name + ' quantity'"
+                        (click)="quantity(line.productId, line.quantity - 1)"
+                      >
+                        −</button
+                      ><span>{{ line.quantity }}</span
+                      ><button
+                        [disabled]="line.quantity >= 9"
+                        [attr.aria-label]="'Increase ' + line.name + ' quantity'"
+                        (click)="quantity(line.productId, line.quantity + 1)"
+                      >
+                        +
+                      </button>
+                    </div>
+                    <strong>{{ (line.unitPrice * line.quantity) / 100 | currency }}</strong>
+                  </div>
+                </div>
+              </div>
+              <div class="item-options">
+                <label
+                  ><input
+                    type="checkbox"
+                    [checked]="line.options.giftWrap"
+                    (change)="giftWrap(line.productId)"
+                  />Gift wrap <span>(on us)</span></label
+                >
+                @if (i > 0) {
+                  <button
+                    class="move-up"
+                    [attr.aria-label]="'Move ' + line.name + ' up'"
+                    (click)="moveUp(i)"
+                  >
+                    <svg class="icon"><use href="#i-up" /></svg>Move up
+                  </button>
+                }
+              </div>
+            </div>
+          }
+        </div>
+        <div class="promo-section">
+          @if (cart().coupon; as coupon) {
+            <div class="applied-promo">
+              <span
+                ><svg class="icon"><use href="#i-check" /></svg>{{ coupon.code }}
+                <span>· {{ coupon.percentOff }}% off applied</span></span
+              ><button aria-label="Remove promo code" (click)="removePromo()">×</button>
+            </div>
+          } @else {
+            <form class="promo-form" (submit)="applyPromo($event)">
+              <label class="sr-only" for="promo-code">Promo code</label
+              ><input
+                id="promo-code"
+                placeholder="Promo code"
+                [value]="promoCode()"
+                (input)="promo($event)"
+              /><button type="submit" [disabled]="!promoCode().trim()">
+                {{ cart().promoStatus === 'loading' ? 'Applying…' : 'Apply' }}
+              </button>
+            </form>
+            <p class="promo-hint">A little something for you: use FORM10.</p>
+          }
+          @if (cart().error) {
+            <p class="error-message" role="alert">{{ cart().error }}</p>
+          }
+        </div>
+        <div class="totals">
+          <div>
+            <span>Subtotal</span><span>{{ cart().summary.subtotal / 100 | currency }}</span>
+          </div>
+          @if (cart().coupon) {
+            <div class="discount">
+              <span>Discount ({{ cart().coupon?.percentOff }}%)</span
+              ><span>−{{ cart().summary.discount / 100 | currency }}</span>
+            </div>
+          }
+          <div class="shipping-row">
+            <label for="shipping"
+              >Shipping
+              <select
+                id="shipping"
+                [value]="checkout().shippingMethod"
+                (change)="setShipping($event)"
+              >
+                <option value="standard">Standard</option>
+                <option value="express">Express</option>
+              </select></label
+            ><span>{{ shipping() ? (shipping() / 100 | currency) : 'Free' }}</span>
+          </div>
+          <div class="grand-total">
+            <span>Total <small>USD</small></span
+            ><strong>{{ total() / 100 | currency }}</strong>
+          </div>
+        </div>
+        @if (checkout().error) {
+          <div class="checkout-error" role="alert">
+            <strong>Let’s try that again.</strong>
+            <p>{{ checkout().error }}</p>
+          </div>
+        }
+        <button
+          class="checkout-button"
+          data-checkout
+          [disabled]="!customer().profile || cart().promoStatus === 'loading'"
+          (click)="placeOrder()"
+        >
+          {{ checkout().status === 'loading' ? 'Placing order…' : 'Checkout'
+          }}<svg class="icon"><use href="#i-arrow" /></svg>
+        </button>
+        <p class="secure-note">A demo checkout. All the good stuff, no real charges.</p>
+        <label class="failure-toggle"
+          ><input
+            data-failure
+            type="checkbox"
+            [checked]="demo.simulateFailure()"
+            (change)="demo.simulateFailure.set(!demo.simulateFailure())"
+          /><span>Simulate payment failure</span><span class="test-badge">DEMO</span></label
+        >
+      } @else {
+        <div class="empty-cart">
+          <span class="empty-bag"
+            ><svg class="icon"><use href="#i-bag" /></svg
+          ></span>
+          <h3>
+            {{ lastOrder() ? 'Make room for something new.' : 'A little room for good things.' }}
+          </h3>
+          <p>Add a few favorites from the collection,<br />or play the cart scene above.</p>
+          <span class="empty-arrow" aria-hidden="true">↙</span>
+        </div>
+        <div class="empty-cart-footer">
+          <span>01 / CHOOSE WELL</span>
+          <p>Everyday essentials.<br />Anything but ordinary.</p>
+        </div>
+      }
+    </aside>
+  </main>
+</fieldset>
+<footer class="footer">
+  <span><span class="live-dot"></span> {{ demo.message() }}</span
+  ><span>FORM SUPPLY <span class="footer-divider">/</span> A SMALL SHOP. A REAL STORE.</span>
+</footer>

@@ -1,0 +1,1973 @@
+[
+  {
+    "id": 6,
+    "type": "[Demo] Reset",
+    "payload": {
+      "type": "[Demo] Reset"
+    },
+    "state": {
+      "customer": {
+        "profile": null,
+        "status": "idle",
+        "error": null
+      },
+      "catalog": {
+        "products": [],
+        "status": "idle",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": []
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [],
+        "coupon": null,
+        "summary": {
+          "subtotal": 0,
+          "discount": 0,
+          "total": 0
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576952522
+  },
+  {
+    "id": 7,
+    "type": "[Customer] Session requested",
+    "payload": {
+      "type": "[Customer] Session requested"
+    },
+    "state": {
+      "customer": {
+        "profile": null,
+        "status": "loading",
+        "error": null
+      },
+      "catalog": {
+        "products": [],
+        "status": "idle",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": []
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [],
+        "coupon": null,
+        "summary": {
+          "subtotal": 0,
+          "discount": 0,
+          "total": 0
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576952523
+  },
+  {
+    "id": 8,
+    "type": "[Customer API] Load profile success",
+    "payload": {
+      "customer": {
+        "id": "cus_1042",
+        "name": "Alex Morgan",
+        "email": "alex.morgan@example.com",
+        "membership": "plus",
+        "address": {
+          "street": "24 Maple Street",
+          "city": "Portland",
+          "country": "US",
+          "postalCode": "97205"
+        }
+      },
+      "type": "[Customer API] Load profile success"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [],
+        "status": "idle",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": []
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [],
+        "coupon": null,
+        "summary": {
+          "subtotal": 0,
+          "discount": 0,
+          "total": 0
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576952703
+  },
+  {
+    "id": 9,
+    "type": "[Catalog Page] Opened",
+    "payload": {
+      "type": "[Catalog Page] Opened"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [],
+        "status": "loading",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": []
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [],
+        "coupon": null,
+        "summary": {
+          "subtotal": 0,
+          "discount": 0,
+          "total": 0
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576952703
+  },
+  {
+    "id": 10,
+    "type": "[Products API] Load products success",
+    "payload": {
+      "products": [
+        {
+          "id": "prod_001",
+          "name": "Studio headphones",
+          "description": "A little less noise. A little more focus.",
+          "category": "Audio",
+          "price": 14900,
+          "color": "Graphite",
+          "image": "headphones",
+          "badge": "Bestseller"
+        },
+        {
+          "id": "prod_002",
+          "name": "Arc desk lamp",
+          "description": "A softer light for your brightest ideas.",
+          "category": "Workspace",
+          "price": 8900,
+          "color": "Sage",
+          "image": "lamp",
+          "badge": null
+        },
+        {
+          "id": "prod_003",
+          "name": "Mechanical keyboard",
+          "description": "Good things, one keystroke at a time.",
+          "category": "Workspace",
+          "price": 11900,
+          "color": "Chalk",
+          "image": "keyboard",
+          "badge": "New arrival"
+        },
+        {
+          "id": "prod_004",
+          "name": "Pocket speaker",
+          "description": "Big sound. Small footprint.",
+          "category": "Audio",
+          "price": 6900,
+          "color": "Sand",
+          "image": "speaker",
+          "badge": null
+        },
+        {
+          "id": "prod_005",
+          "name": "Everyday backpack",
+          "description": "Room for the things that move you.",
+          "category": "Everyday",
+          "price": 7900,
+          "color": "Olive",
+          "image": "backpack",
+          "badge": null
+        },
+        {
+          "id": "prod_006",
+          "name": "Insulated bottle",
+          "description": "Stay in your flow. Take a sip.",
+          "category": "Everyday",
+          "price": 3500,
+          "color": "Terracotta",
+          "image": "bottle",
+          "badge": null
+        }
+      ],
+      "type": "[Products API] Load products success"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": []
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [],
+        "coupon": null,
+        "summary": {
+          "subtotal": 0,
+          "discount": 0,
+          "total": 0
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953024
+  },
+  {
+    "id": 11,
+    "type": "[Cart] Product added",
+    "payload": {
+      "product": {
+        "id": "prod_001",
+        "name": "Studio headphones",
+        "description": "A little less noise. A little more focus.",
+        "category": "Audio",
+        "price": 14900,
+        "color": "Graphite",
+        "image": "headphones",
+        "badge": "Bestseller"
+      },
+      "quantity": 1,
+      "type": "[Cart] Product added"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": []
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [
+          {
+            "id": "line_001",
+            "productId": "prod_001",
+            "name": "Studio headphones",
+            "unitPrice": 14900,
+            "quantity": 1,
+            "options": {
+              "color": "Graphite",
+              "giftWrap": false
+            }
+          }
+        ],
+        "coupon": null,
+        "summary": {
+          "subtotal": 14900,
+          "discount": 0,
+          "total": 14900
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953024
+  },
+  {
+    "id": 12,
+    "type": "[Cart] Product added",
+    "payload": {
+      "product": {
+        "id": "prod_002",
+        "name": "Arc desk lamp",
+        "description": "A softer light for your brightest ideas.",
+        "category": "Workspace",
+        "price": 8900,
+        "color": "Sage",
+        "image": "lamp",
+        "badge": null
+      },
+      "quantity": 1,
+      "type": "[Cart] Product added"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": []
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [
+          {
+            "id": "line_001",
+            "productId": "prod_001",
+            "name": "Studio headphones",
+            "unitPrice": 14900,
+            "quantity": 1,
+            "options": {
+              "color": "Graphite",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_002",
+            "productId": "prod_002",
+            "name": "Arc desk lamp",
+            "unitPrice": 8900,
+            "quantity": 1,
+            "options": {
+              "color": "Sage",
+              "giftWrap": false
+            }
+          }
+        ],
+        "coupon": null,
+        "summary": {
+          "subtotal": 23800,
+          "discount": 0,
+          "total": 23800
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953025
+  },
+  {
+    "id": 13,
+    "type": "[Cart] Product added",
+    "payload": {
+      "product": {
+        "id": "prod_003",
+        "name": "Mechanical keyboard",
+        "description": "Good things, one keystroke at a time.",
+        "category": "Workspace",
+        "price": 11900,
+        "color": "Chalk",
+        "image": "keyboard",
+        "badge": "New arrival"
+      },
+      "quantity": 1,
+      "type": "[Cart] Product added"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": []
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [
+          {
+            "id": "line_001",
+            "productId": "prod_001",
+            "name": "Studio headphones",
+            "unitPrice": 14900,
+            "quantity": 1,
+            "options": {
+              "color": "Graphite",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_002",
+            "productId": "prod_002",
+            "name": "Arc desk lamp",
+            "unitPrice": 8900,
+            "quantity": 1,
+            "options": {
+              "color": "Sage",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_003",
+            "productId": "prod_003",
+            "name": "Mechanical keyboard",
+            "unitPrice": 11900,
+            "quantity": 1,
+            "options": {
+              "color": "Chalk",
+              "giftWrap": false
+            }
+          }
+        ],
+        "coupon": null,
+        "summary": {
+          "subtotal": 35700,
+          "discount": 0,
+          "total": 35700
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953025
+  },
+  {
+    "id": 14,
+    "type": "[Catalog Page] Favorite toggled",
+    "payload": {
+      "productId": "prod_001",
+      "type": "[Catalog Page] Favorite toggled"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": [
+          "prod_001"
+        ]
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [
+          {
+            "id": "line_001",
+            "productId": "prod_001",
+            "name": "Studio headphones",
+            "unitPrice": 14900,
+            "quantity": 1,
+            "options": {
+              "color": "Graphite",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_002",
+            "productId": "prod_002",
+            "name": "Arc desk lamp",
+            "unitPrice": 8900,
+            "quantity": 1,
+            "options": {
+              "color": "Sage",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_003",
+            "productId": "prod_003",
+            "name": "Mechanical keyboard",
+            "unitPrice": 11900,
+            "quantity": 1,
+            "options": {
+              "color": "Chalk",
+              "giftWrap": false
+            }
+          }
+        ],
+        "coupon": null,
+        "summary": {
+          "subtotal": 35700,
+          "discount": 0,
+          "total": 35700
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953025
+  },
+  {
+    "id": 15,
+    "type": "[Cart] Items reordered",
+    "payload": {
+      "productIds": [
+        "prod_003",
+        "prod_001",
+        "prod_002"
+      ],
+      "type": "[Cart] Items reordered"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": [
+          "prod_001"
+        ]
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [
+          {
+            "id": "line_003",
+            "productId": "prod_003",
+            "name": "Mechanical keyboard",
+            "unitPrice": 11900,
+            "quantity": 1,
+            "options": {
+              "color": "Chalk",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_001",
+            "productId": "prod_001",
+            "name": "Studio headphones",
+            "unitPrice": 14900,
+            "quantity": 1,
+            "options": {
+              "color": "Graphite",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_002",
+            "productId": "prod_002",
+            "name": "Arc desk lamp",
+            "unitPrice": 8900,
+            "quantity": 1,
+            "options": {
+              "color": "Sage",
+              "giftWrap": false
+            }
+          }
+        ],
+        "coupon": null,
+        "summary": {
+          "subtotal": 35700,
+          "discount": 0,
+          "total": 35700
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953025
+  },
+  {
+    "id": 16,
+    "type": "[Cart] Gift wrap toggled",
+    "payload": {
+      "productId": "prod_001",
+      "type": "[Cart] Gift wrap toggled"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": [
+          "prod_001"
+        ]
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [
+          {
+            "id": "line_003",
+            "productId": "prod_003",
+            "name": "Mechanical keyboard",
+            "unitPrice": 11900,
+            "quantity": 1,
+            "options": {
+              "color": "Chalk",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_001",
+            "productId": "prod_001",
+            "name": "Studio headphones",
+            "unitPrice": 14900,
+            "quantity": 1,
+            "options": {
+              "color": "Graphite",
+              "giftWrap": true
+            }
+          },
+          {
+            "id": "line_002",
+            "productId": "prod_002",
+            "name": "Arc desk lamp",
+            "unitPrice": 8900,
+            "quantity": 1,
+            "options": {
+              "color": "Sage",
+              "giftWrap": false
+            }
+          }
+        ],
+        "coupon": null,
+        "summary": {
+          "subtotal": 35700,
+          "discount": 0,
+          "total": 35700
+        },
+        "promoStatus": "idle",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953025
+  },
+  {
+    "id": 17,
+    "type": "[Cart] Promo code submitted",
+    "payload": {
+      "code": "FORM10",
+      "type": "[Cart] Promo code submitted"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": [
+          "prod_001"
+        ]
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [
+          {
+            "id": "line_003",
+            "productId": "prod_003",
+            "name": "Mechanical keyboard",
+            "unitPrice": 11900,
+            "quantity": 1,
+            "options": {
+              "color": "Chalk",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_001",
+            "productId": "prod_001",
+            "name": "Studio headphones",
+            "unitPrice": 14900,
+            "quantity": 1,
+            "options": {
+              "color": "Graphite",
+              "giftWrap": true
+            }
+          },
+          {
+            "id": "line_002",
+            "productId": "prod_002",
+            "name": "Arc desk lamp",
+            "unitPrice": 8900,
+            "quantity": 1,
+            "options": {
+              "color": "Sage",
+              "giftWrap": false
+            }
+          }
+        ],
+        "coupon": null,
+        "summary": {
+          "subtotal": 35700,
+          "discount": 0,
+          "total": 35700
+        },
+        "promoStatus": "loading",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953025
+  },
+  {
+    "id": 18,
+    "type": "[Promo API] Apply code success",
+    "payload": {
+      "coupon": {
+        "code": "FORM10",
+        "percentOff": 10
+      },
+      "type": "[Promo API] Apply code success"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": [
+          "prod_001"
+        ]
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [
+          {
+            "id": "line_003",
+            "productId": "prod_003",
+            "name": "Mechanical keyboard",
+            "unitPrice": 11900,
+            "quantity": 1,
+            "options": {
+              "color": "Chalk",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_001",
+            "productId": "prod_001",
+            "name": "Studio headphones",
+            "unitPrice": 14900,
+            "quantity": 1,
+            "options": {
+              "color": "Graphite",
+              "giftWrap": true
+            }
+          },
+          {
+            "id": "line_002",
+            "productId": "prod_002",
+            "name": "Arc desk lamp",
+            "unitPrice": 8900,
+            "quantity": 1,
+            "options": {
+              "color": "Sage",
+              "giftWrap": false
+            }
+          }
+        ],
+        "coupon": {
+          "code": "FORM10",
+          "percentOff": 10
+        },
+        "summary": {
+          "subtotal": 35700,
+          "discount": 3570,
+          "total": 32130
+        },
+        "promoStatus": "success",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "standard",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953286
+  },
+  {
+    "id": 19,
+    "type": "[Checkout] Shipping method changed",
+    "payload": {
+      "method": "express",
+      "type": "[Checkout] Shipping method changed"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": [
+          "prod_001"
+        ]
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [
+          {
+            "id": "line_003",
+            "productId": "prod_003",
+            "name": "Mechanical keyboard",
+            "unitPrice": 11900,
+            "quantity": 1,
+            "options": {
+              "color": "Chalk",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_001",
+            "productId": "prod_001",
+            "name": "Studio headphones",
+            "unitPrice": 14900,
+            "quantity": 1,
+            "options": {
+              "color": "Graphite",
+              "giftWrap": true
+            }
+          },
+          {
+            "id": "line_002",
+            "productId": "prod_002",
+            "name": "Arc desk lamp",
+            "unitPrice": 8900,
+            "quantity": 1,
+            "options": {
+              "color": "Sage",
+              "giftWrap": false
+            }
+          }
+        ],
+        "coupon": {
+          "code": "FORM10",
+          "percentOff": 10
+        },
+        "summary": {
+          "subtotal": 35700,
+          "discount": 3570,
+          "total": 32130
+        },
+        "promoStatus": "success",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "express",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953286
+  },
+  {
+    "id": 20,
+    "type": "[Cart] Quantity changed",
+    "payload": {
+      "productId": "prod_001",
+      "quantity": 2,
+      "type": "[Cart] Quantity changed"
+    },
+    "state": {
+      "customer": {
+        "profile": {
+          "id": "cus_1042",
+          "name": "Alex Morgan",
+          "email": "alex.morgan@example.com",
+          "membership": "plus",
+          "address": {
+            "street": "24 Maple Street",
+            "city": "Portland",
+            "country": "US",
+            "postalCode": "97205"
+          }
+        },
+        "status": "success",
+        "error": null
+      },
+      "catalog": {
+        "products": [
+          {
+            "id": "prod_001",
+            "name": "Studio headphones",
+            "description": "A little less noise. A little more focus.",
+            "category": "Audio",
+            "price": 14900,
+            "color": "Graphite",
+            "image": "headphones",
+            "badge": "Bestseller"
+          },
+          {
+            "id": "prod_002",
+            "name": "Arc desk lamp",
+            "description": "A softer light for your brightest ideas.",
+            "category": "Workspace",
+            "price": 8900,
+            "color": "Sage",
+            "image": "lamp",
+            "badge": null
+          },
+          {
+            "id": "prod_003",
+            "name": "Mechanical keyboard",
+            "description": "Good things, one keystroke at a time.",
+            "category": "Workspace",
+            "price": 11900,
+            "color": "Chalk",
+            "image": "keyboard",
+            "badge": "New arrival"
+          },
+          {
+            "id": "prod_004",
+            "name": "Pocket speaker",
+            "description": "Big sound. Small footprint.",
+            "category": "Audio",
+            "price": 6900,
+            "color": "Sand",
+            "image": "speaker",
+            "badge": null
+          },
+          {
+            "id": "prod_005",
+            "name": "Everyday backpack",
+            "description": "Room for the things that move you.",
+            "category": "Everyday",
+            "price": 7900,
+            "color": "Olive",
+            "image": "backpack",
+            "badge": null
+          },
+          {
+            "id": "prod_006",
+            "name": "Insulated bottle",
+            "description": "Stay in your flow. Take a sip.",
+            "category": "Everyday",
+            "price": 3500,
+            "color": "Terracotta",
+            "image": "bottle",
+            "badge": null
+          }
+        ],
+        "status": "success",
+        "error": null,
+        "filters": {
+          "category": "All",
+          "query": ""
+        },
+        "sort": "featured",
+        "favorites": [
+          "prod_001"
+        ]
+      },
+      "cart": {
+        "currency": "USD",
+        "items": [
+          {
+            "id": "line_003",
+            "productId": "prod_003",
+            "name": "Mechanical keyboard",
+            "unitPrice": 11900,
+            "quantity": 1,
+            "options": {
+              "color": "Chalk",
+              "giftWrap": false
+            }
+          },
+          {
+            "id": "line_001",
+            "productId": "prod_001",
+            "name": "Studio headphones",
+            "unitPrice": 14900,
+            "quantity": 2,
+            "options": {
+              "color": "Graphite",
+              "giftWrap": true
+            }
+          },
+          {
+            "id": "line_002",
+            "productId": "prod_002",
+            "name": "Arc desk lamp",
+            "unitPrice": 8900,
+            "quantity": 1,
+            "options": {
+              "color": "Sage",
+              "giftWrap": false
+            }
+          }
+        ],
+        "coupon": {
+          "code": "FORM10",
+          "percentOff": 10
+        },
+        "summary": {
+          "subtotal": 50600,
+          "discount": 5060,
+          "total": 45540
+        },
+        "promoStatus": "success",
+        "error": null
+      },
+      "checkout": {
+        "shippingMethod": "express",
+        "status": "idle",
+        "error": null
+      },
+      "orders": {
+        "history": [],
+        "lastOrderId": null
+      }
+    },
+    "timestamp": 1792576953286
+  }
+]
